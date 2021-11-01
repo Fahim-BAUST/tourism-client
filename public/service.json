@@ -1,0 +1,65 @@
+{
+    "service":[
+        {
+            "name":"Colosseum",
+            "img":"https://www.planetware.com/photos-large/I/italy-colosseum-day.jpg",
+            "country":"Italy",
+            "description":"This huge amphitheater, the largest of its kind ever built by the Roman Empire and the largest of their constructions to survive, remained a model for sports facilities right up to modern times. Built by Vespasian in AD 72 and enlarged by the addition of a fourth story by his son, Titus, it was a venue for public spectacles and shows – even mock sea battles. A wooden floor that was 83 by 48 meters covered two additional underground stories with tunnels, rooms, cells, and passages that provided space for gladiators, workers, wild animals, and storage.Today, the structure stands in stark contrast to the modern development that surrounds it and is a prominent reminder of ancient times and the extensive history of Rome.",
+            "groupSize":50,
+            "duration":2,
+            "offer":"15%",
+            "price":2000
+        },
+        {
+            "name":"Colosseum",
+            "img":"https://www.planetware.com/photos-large/I/italy-colosseum-day.jpg",
+            "country":"Italy",
+            "description":"This huge amphitheater, the largest of its kind ever built by the Roman Empire and the largest of their constructions to survive, remained a model for sports facilities right up to modern times. Built by Vespasian in AD 72 and enlarged by the addition of a fourth story by his son, Titus, it was a venue for public spectacles and shows – even mock sea battles. A wooden floor that was 83 by 48 meters covered two additional underground stories with tunnels, rooms, cells, and passages that provided space for gladiators, workers, wild animals, and storage.Today, the structure stands in stark contrast to the modern development that surrounds it and is a prominent reminder of ancient times and the extensive history of Rome.",
+            "groupSize":50,
+            "offer":"15%",
+            "duration":2,
+            "price":2000
+        },
+        {
+            "name":"Colosseum",
+            "img":"https://www.planetware.com/photos-large/I/italy-colosseum-day.jpg",
+            "country":"Italy",
+            "description":"This huge amphitheater, the largest of its kind ever built by the Roman Empire and the largest of their constructions to survive, remained a model for sports facilities right up to modern times. Built by Vespasian in AD 72 and enlarged by the addition of a fourth story by his son, Titus, it was a venue for public spectacles and shows – even mock sea battles. A wooden floor that was 83 by 48 meters covered two additional underground stories with tunnels, rooms, cells, and passages that provided space for gladiators, workers, wild animals, and storage.Today, the structure stands in stark contrast to the modern development that surrounds it and is a prominent reminder of ancient times and the extensive history of Rome.",
+            "groupSize":50,
+            "offer":"15%",
+            "duration":2,
+            "price":2000
+        },
+        {
+            "name":"Colosseum",
+            "img":"https://www.planetware.com/photos-large/I/italy-colosseum-day.jpg",
+            "country":"Italy",
+            "description":"This huge amphitheater, the largest of its kind ever built by the Roman Empire and the largest of their constructions to survive, remained a model for sports facilities right up to modern times. Built by Vespasian in AD 72 and enlarged by the addition of a fourth story by his son, Titus, it was a venue for public spectacles and shows – even mock sea battles. A wooden floor that was 83 by 48 meters covered two additional underground stories with tunnels, rooms, cells, and passages that provided space for gladiators, workers, wild animals, and storage.Today, the structure stands in stark contrast to the modern development that surrounds it and is a prominent reminder of ancient times and the extensive history of Rome.",
+            "groupSize":50,
+            "offer":"15%",
+            "duration":2,
+            "price":2000
+        },
+        {
+            "name":"Colosseum",
+            "img":"https://www.planetware.com/photos-large/I/italy-colosseum-day.jpg",
+            "country":"Italy",
+            "description":"This huge amphitheater, the largest of its kind ever built by the Roman Empire and the largest of their constructions to survive, remained a model for sports facilities right up to modern times. Built by Vespasian in AD 72 and enlarged by the addition of a fourth story by his son, Titus, it was a venue for public spectacles and shows – even mock sea battles. A wooden floor that was 83 by 48 meters covered two additional underground stories with tunnels, rooms, cells, and passages that provided space for gladiators, workers, wild animals, and storage.Today, the structure stands in stark contrast to the modern development that surrounds it and is a prominent reminder of ancient times and the extensive history of Rome.",
+            "groupSize":50,
+            "offer":"15%",
+            "duration":2,
+            "price":2000
+        },
+        {
+            "name":"Colosseum",
+            "img":"https://www.planetware.com/photos-large/I/italy-colosseum-day.jpg",
+            "country":"Italy",
+            "description":"This huge amphitheater, the largest of its kind ever built by the Roman Empire and the largest of their constructions to survive, remained a model for sports facilities right up to modern times. Built by Vespasian in AD 72 and enlarged by the addition of a fourth story by his son, Titus, it was a venue for public spectacles and shows – even mock sea battles. A wooden floor that was 83 by 48 meters covered two additional underground stories with tunnels, rooms, cells, and passages that provided space for gladiators, workers, wild animals, and storage.Today, the structure stands in stark contrast to the modern development that surrounds it and is a prominent reminder of ancient times and the extensive history of Rome.",
+            "groupSize":50,
+            "offer":"15%",
+            "duration":2,
+            "price":2000
+        }
+        
+    ]
+}
