@@ -78,7 +78,7 @@ const Header = () => {
 
                                             }}
                                         >
-                                              My orders
+                                              My order
                                         </NavLink>
 
 
