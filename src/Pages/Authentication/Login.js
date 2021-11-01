@@ -5,7 +5,7 @@ import useAuth from '../../Hooks/useAuth';
 import '../Services/Service/Service.js'
 
 const Login = () => {
-    const { signInUsingGoogle, signInUsingEamilAndPass, error } = useAuth();
+    const { signInUsingGoogle, signInUsingEamilAndPass, error, user } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isAdmin, setIsAdmin] = useState(false);
