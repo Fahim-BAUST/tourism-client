@@ -13,6 +13,7 @@ import ManageAllOrder from './Pages/Order/ManageAllOrder';
 import MyOrder from './Pages/Order/MyOrder';
 import AddService from './Pages/Services/AddService/AddService';
 import AboutUs from './Pages/AboutUs/AboutUs';
+import Register from './Pages/Authentication/Register';
 
 function App() {
   return (
@@ -46,6 +47,10 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+
             <Route path="/about">
               <AboutUs></AboutUs>
             </Route>

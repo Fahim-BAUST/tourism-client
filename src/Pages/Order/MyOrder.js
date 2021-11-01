@@ -49,7 +49,7 @@ const MyOrder = () => {
         }}
         variant="h3"
       >
-        All Orders
+        My Orders
       </Typography>
       <table className="table container table-warning  table-hover">
         <thead className="table-dark">

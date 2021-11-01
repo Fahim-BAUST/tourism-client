@@ -13,7 +13,7 @@ const Header = () => {
                         className="navbar-brand "
                         to="/home"
                     >
-                        <img style={{ width: "90px",height:"40px" }} className="img-fluid" src="https://i.ibb.co/jGXXZyd/e2b4c47b242446a1b7f1f20d9612a76f.png" alt="" />
+                        <img style={{ width: "90px", height: "40px" }} className="img-fluid" src="https://i.ibb.co/jGXXZyd/e2b4c47b242446a1b7f1f20d9612a76f.png" alt="" />
                     </NavLink>
                     <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -59,17 +59,17 @@ const Header = () => {
                                     <i className="fas fa-users"></i> About us
                                 </NavLink>
                             </li>
-                            {user?.email &&<li className="nav-item dropdown">
-                                <NavLink  
-                                 activeStyle={{
-                                    fontWeight: "bolder"
-                                }}
-                                to="" className="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  <i className="fas fa-tasks"></i> Manage orders
+                            {user?.email && <li className="nav-item dropdown">
+                                <NavLink
+                                    activeStyle={{
+                                        fontWeight: "bolder"
+                                    }}
+                                    to="" className="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i className="fas fa-tasks"></i> Manage orders
                                 </NavLink>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li>    
-                                         <NavLink
+                                    <li>
+                                        <NavLink
                                             className="nav-link text-dark"
                                             to="/myOrder"
                                             className="dropdown-item"
@@ -78,14 +78,14 @@ const Header = () => {
 
                                             }}
                                         >
-                                              My order
+                                            My order
                                         </NavLink>
 
 
 
                                     </li>
-                                    <li>
-                                     <NavLink
+                                    {user?.email == 'admin@gmail.com' && <li>
+                                        <NavLink
                                             className="nav-link text-dark "
                                             to="/allOrder"
                                             className="dropdown-item"
@@ -94,14 +94,14 @@ const Header = () => {
 
                                             }}
                                         >
-                                             All order
+                                            All order
                                         </NavLink>
 
-                                        
-                                        </li>
 
-                                        <li>
-                                     <NavLink
+                                    </li>}
+
+                                    <li>
+                                        <NavLink
                                             className="nav-link text-dark "
                                             to="/addService"
                                             className="dropdown-item"
@@ -110,18 +110,18 @@ const Header = () => {
 
                                             }}
                                         >
-                                             Add Service
+                                            Add Service
                                         </NavLink>
 
-                                        
-                                        </li>
+
+                                    </li>
 
                                 </ul>
                             </li>}
                         </ul>
                         <form className="d-flex align-items-center">
                             {user?.photoURL && <img style={{ width: "35px" }} className="img-fluid rounded-circle" src={user.photoURL} alt="" />}
-                            {user?.email && <span className="me-2">{user.displayName}</span>}
+                            {user?.email == 'admin@gmail.com' ? <span className="me-2">ADMIN</span> : <span className="me-2">{user.displayName}</span>}
 
                             {user?.email ? <button onClick={logOut} className="btn btn-outline-info" type="submit"><i className="fas fa-sign-out-alt"></i> Logout</button> : <NavLink to="/login"><button className="btn btn-outline-info" type="submit"><i className="fas fa-sign-in-alt"></i> Login</button></NavLink>}
                         </form>
