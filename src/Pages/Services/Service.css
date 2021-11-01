@@ -1,14 +1,21 @@
 @media screen and (max-width: 600px) {
-    .grid-responsive {
-      margin: 0 30px 30px 30px !important;
-    }
-    .heading-size{
-        font-size: 35px !important;
-    }
-    .site-name{
-        font-size: 50px !important;
-    }
-    .service-name{
-        font-size : 40px !important;
-    }
+  .grid-responsive {
+    margin: 0 30px 30px 30px !important;
   }
+  .heading-size {
+    font-size: 35px !important;
+  }
+  .site-name {
+    font-size: 50px !important;
+  }
+  .service-name {
+    font-size: 40px !important;
+  }
+  .acoord-margin {
+    margin-top: 30px;
+  }
+
+  .accord-image {
+    padding: 0 30px;
+  }
+}
