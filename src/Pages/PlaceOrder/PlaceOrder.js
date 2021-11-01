@@ -14,7 +14,7 @@ const PlaceOrder = () => {
 
     const [service, setService] = useState([]);
     useEffect(() => {
-        fetch(`https://possessed-hollow-97879.herokuapp.com/services/${id}`)
+        fetch(`https://blooming-meadow-89430.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, []);
@@ -26,7 +26,7 @@ const PlaceOrder = () => {
         data.orderName = service.name;
         data.price = service.price;
         data.date = startDate;
-        fetch('https://possessed-hollow-97879.herokuapp.com/orders', {
+        fetch('https://blooming-meadow-89430.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -8,7 +8,7 @@ const AddService = () => {
 
     const onSubmit=data=>{
 
-        fetch('https://possessed-hollow-97879.herokuapp.com/addService', {
+        fetch('https://blooming-meadow-89430.herokuapp.com/addService', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

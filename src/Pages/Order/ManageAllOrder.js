@@ -6,7 +6,7 @@ const ManageAllOrder = () => {
 
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('https://possessed-hollow-97879.herokuapp.com/allOrders')
+        fetch('https://blooming-meadow-89430.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [orders]);
@@ -15,7 +15,7 @@ const ManageAllOrder = () => {
         const data ={status:status} ;
         const proceed = window.confirm('Are you sure, You want to Approve?');
         if (proceed) {
-            const url = `https://possessed-hollow-97879.herokuapp.com/updateStatus/${id}`;
+            const url = `https://blooming-meadow-89430.herokuapp.com/updateStatus/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -41,7 +41,7 @@ const ManageAllOrder = () => {
 
         const proceed = window.confirm('Are you sure, You want to delete?');
         if (proceed) {
-            const url = `https://possessed-hollow-97879.herokuapp.com/allOrders/${id}`;
+            const url = `https://blooming-meadow-89430.herokuapp.com/allOrders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

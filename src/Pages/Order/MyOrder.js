@@ -8,7 +8,7 @@ const MyOrder = () => {
 
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch(`https://possessed-hollow-97879.herokuapp.com/allOrders/${user.email}`)
+        fetch(`https://blooming-meadow-89430.herokuapp.com/allOrders/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setOrders(data);
@@ -19,7 +19,7 @@ const MyOrder = () => {
 
         const proceed = window.confirm('Are you sure, You want to delete?');
         if (proceed) {
-            const url = `https://possessed-hollow-97879.herokuapp.com/allOrders/${id}`;
+            const url = `https://blooming-meadow-89430.herokuapp.com/allOrders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -40,7 +40,7 @@ const MyOrder = () => {
     }
     return (
         <div className=" d-flex flex-column align-items-center">
-            <Typography sx={{ textAlign: "center", pt: 3, fontWeight: 800, marginTop: 2, marginBottom: 5, color: "#03e12", fontSize: "50px", fontFamily: "cursive" }} variant="h3">My Orders</Typography>
+            <Typography className="service-name" sx={{ textAlign: "center", pt: 3, fontWeight: 800, marginTop: 2, marginBottom: 5, color: "#03e12", fontSize: "50px", fontFamily: "cursive" }} variant="h3">My Orders</Typography>
             {orders.length === 0 ? <Box sx={{ width: '100%' }}><LinearProgress color="secondary" /></Box>
                 :
                 orders.map(order => <div
