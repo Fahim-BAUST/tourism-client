@@ -68,7 +68,7 @@ const Header = () => {
                                     <i className="fas fa-tasks"></i> Manage orders
                                 </NavLink>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li>
+                                    {user?.email !== 'admin@gmail.com' && <li>
                                         <NavLink
                                             className="nav-link text-dark"
                                             to="/myOrder"
@@ -83,7 +83,7 @@ const Header = () => {
 
 
 
-                                    </li>
+                                    </li>}
                                     {user?.email === 'admin@gmail.com' && <li>
                                         <NavLink
                                             className="nav-link text-dark "
