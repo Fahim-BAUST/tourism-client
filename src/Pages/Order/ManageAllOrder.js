@@ -57,7 +57,7 @@ const ManageAllOrder = () => {
   };
   return (
     <div>
-      {user?.email == 'admin@gmail.com' ? <div className="table-responsive">
+      {user?.email === 'admin@gmail.com' ? <div className="table-responsive">
         <Typography
           sx={{
             textAlign: "center",

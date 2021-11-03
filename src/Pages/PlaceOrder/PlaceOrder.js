@@ -45,7 +45,7 @@ const PlaceOrder = () => {
     return (
         <div>
 
-            <div className="container mt-3">
+            {user.emailVerified === true ? <div className="container mt-3">
                 <div className="row">
                     <div className="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
                         <img className="img-fluid" src={service.img} alt="" />
@@ -69,14 +69,14 @@ const PlaceOrder = () => {
                             <br />
                             <input className="form-control" aria-label="Username" aria-describedby="basic-addon1" placeholder="phone number" defaultValue="" {...register("phone", { required: true })} /> <br />
 
-                            <DatePicker 
-                            className="form-control mb-4"
-                            selected={startDate}
+                            <DatePicker
+                                className="form-control mb-4"
+                                selected={startDate}
                                 onChange={(date) => setStartDate(date)}
                                 timeInputLabel="Time:"
                                 dateFormat="MM/dd/yyyy h:mm aa"
-                                showTimeInput 
-                                />
+                                showTimeInput
+                            />
 
 
                             <input style={{ borderRadius: "20px", padding: "10px 50px", border: "none", color: "white", backgroundColor: "#c29d59" }} type="submit" />
@@ -84,7 +84,23 @@ const PlaceOrder = () => {
 
                     </div>
                 </div>
-            </div>
+            </div> : <div className="table-responsive">
+                <Typography
+                    sx={{
+                        textAlign: "center",
+                        pt: 3,
+                        fontWeight: 800,
+                        marginTop: 2,
+                        marginBottom: 5,
+                        color: "red",
+                        fontSize: "40px",
+                        fontFamily: "cursive",
+                    }}
+                    variant="h3"
+                >
+                    please verify your email
+                </Typography>
+            </div>}
         </div>
     );
 };

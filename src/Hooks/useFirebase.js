@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Authentication/Firebase/firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from "firebase/auth";
 
 initializeAuthentication();
 
@@ -13,30 +13,42 @@ const useFirebase = () => {
     // sign in using google 
     const signInUsingGoogle = () => {
         return signInWithPopup(auth, googleProvider)
-            .finally(() => { setLoading(false) });
+
     }
 
     // sign in with email and pass
     const signInUsingEamilAndPass = (email, password) => {
 
-        return signInWithEmailAndPassword(auth, email, password).catch(error => {
+        return signInWithEmailAndPassword(auth, email, password)
+
+    }
+
+    // sign up with email and pass 
+    const createUserWithEmailandPass = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password)
+
+    }
+
+    const updateUserProfile = (name) => {
+        updateProfile(auth.currentUser, {
+            displayName: name
+        }).then(() => {
+            // Profile updated!
+            // ...
+        }).catch((error) => {
             setError(error.message);
-        }).finally(() => {
-            setLoading(false);
         });
 
     }
 
-    // // sign up with email and pass 
-    // const createUserWithEmailandPass = (email, password) => {
-    //     return createUserWithEmailAndPassword(auth, email, password).catch(error => {
-    //         setError(error.message);
-    //     }).finally(() => {
-    //         setLoading(false);
 
-    //     });
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(result => {
+                console.log(result);
+            })
 
-    // }
+    }
 
 
 
@@ -69,8 +81,11 @@ const useFirebase = () => {
         error,
         signInUsingGoogle,
         signInUsingEamilAndPass,
-        logOut
-        // createUserWithEmailandPass
+        logOut,
+        createUserWithEmailandPass,
+        setLoading,
+        setError,
+        updateUserProfile, verifyEmail
     }
 }
 

@@ -51,7 +51,7 @@ const MyOrder = () => {
       >
         My Orders
       </Typography>
-      <table className="table container table-warning  table-hover">
+      {user.emailVerified === true ? <table className="table container table-warning  table-hover">
         <thead className="table-dark">
           <tr>
             <th scope="col">#</th>
@@ -105,7 +105,23 @@ const MyOrder = () => {
             ))
           )}
         </tbody>
-      </table>
+      </table> : <div className="table-responsive">
+        <Typography
+          sx={{
+            textAlign: "center",
+            pt: 3,
+            fontWeight: 800,
+            marginTop: 2,
+            marginBottom: 5,
+            color: "red",
+            fontSize: "40px",
+            fontFamily: "cursive",
+          }}
+          variant="h3"
+        >
+          please verify your email
+        </Typography>
+      </div>}
     </div>
   );
 };

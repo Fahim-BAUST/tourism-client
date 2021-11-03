@@ -84,7 +84,7 @@ const Header = () => {
 
 
                                     </li>
-                                    {user?.email == 'admin@gmail.com' && <li>
+                                    {user?.email === 'admin@gmail.com' && <li>
                                         <NavLink
                                             className="nav-link text-dark "
                                             to="/allOrder"
@@ -100,7 +100,7 @@ const Header = () => {
 
                                     </li>}
 
-                                    <li>
+                                    {user?.email === 'admin@gmail.com' && <li>
                                         <NavLink
                                             className="nav-link text-dark "
                                             to="/addService"
@@ -114,7 +114,7 @@ const Header = () => {
                                         </NavLink>
 
 
-                                    </li>
+                                    </li>}
 
                                 </ul>
                             </li>}
