@@ -70,9 +70,9 @@ const Header = () => {
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     {user?.email !== 'admin@gmail.com' && <li>
                                         <NavLink
-                                            className="nav-link text-dark"
+                                            className="nav-link text-dark dropdown-item"
                                             to="/myOrder"
-                                            className="dropdown-item"
+
                                             activeStyle={{
                                                 fontWeight: "bolder",
 
@@ -86,9 +86,8 @@ const Header = () => {
                                     </li>}
                                     {user?.email === 'admin@gmail.com' && <li>
                                         <NavLink
-                                            className="nav-link text-dark "
+                                            className="nav-link text-dark dropdown-item"
                                             to="/allOrder"
-                                            className="dropdown-item"
                                             activeStyle={{
                                                 fontWeight: "bolder"
 
@@ -102,9 +101,8 @@ const Header = () => {
 
                                     {user?.email === 'admin@gmail.com' && <li>
                                         <NavLink
-                                            className="nav-link text-dark "
+                                            className="nav-link text-dark dropdown-item"
                                             to="/addService"
-                                            className="dropdown-item"
                                             activeStyle={{
                                                 fontWeight: "bolder"
 
@@ -121,7 +119,7 @@ const Header = () => {
                         </ul>
                         <form className="d-flex align-items-center">
                             {user?.photoURL && <img style={{ width: "35px" }} className="img-fluid rounded-circle" src={user.photoURL} alt="" />}
-                            {user?.email == 'admin@gmail.com' ? <span className="me-2">ADMIN</span> : <span className="me-2">{user.displayName}</span>}
+                            {user?.email === 'admin@gmail.com' ? <span className="me-2">ADMIN</span> : <span className="me-2">{user.displayName}</span>}
 
                             {user?.email ? <button onClick={logOut} className="btn btn-outline-info" type="submit"><i className="fas fa-sign-out-alt"></i> Logout</button> : <NavLink to="/login"><button className="btn btn-outline-info" type="submit"><i className="fas fa-sign-in-alt"></i> Login</button></NavLink>}
                         </form>

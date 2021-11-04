@@ -4,8 +4,10 @@ import { useLocation, useHistory, NavLink } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import '../Services/Service/Service.js'
 
+
+
 const Login = () => {
-    const { signInUsingGoogle, signInUsingEamilAndPass, error, user, setLoading, setError } = useAuth();
+    const { signInUsingGoogle, signInUsingEamilAndPass, error, setLoading, setError } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -50,7 +52,9 @@ const Login = () => {
         <div>
 
             <div className="login container text-center  mx-auto border border-1 mt-5 rounded-3 ">
-                <h2 className="mt-3 mb-3  fs-3 ">Please Login</h2>
+
+                <h2 className="mt-3 mb-3  fs-3 ">Please Login (admin/user)</h2>
+                <p className="text-danger">***Admin login: email=admin@gmail.com <br /> pass: adminadmin</p>
                 <form className="text-start " onSubmit={handleSignIn}>
                     <label htmlFor="inputEmail4" style={{ fontSize: "13px" }} className="form-label fw-bold ">Email</label>
                     <input type="email" onBlur={handleEmailChange} className="form-control border border-secondary" id="inputEmail4" required />
