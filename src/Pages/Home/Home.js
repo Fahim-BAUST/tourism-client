@@ -35,6 +35,10 @@ const Home = () => {
                     '@media (min-width: 900px)': {
                         width: '960px',
                         height: '600px'
+                    },
+                    '@media (max-width: 500px)': {
+                        width: '350px',
+                        height: '200px'
                     }
                 }}
             >
